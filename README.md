@@ -18,7 +18,27 @@ BMS/BME/BML譜面ファイル内のキー音定義(`#WAVxx`)を読み込み、�
 
 ## 使い方
 
-### 1. exeをビルドして使う
+どの方法でも、事前にPythonのインストールが必要です。
+
+### 事前準備: Pythonのインストール
+
+1. [Python公式サイト](https://www.python.org/downloads/)からWindows用インストーラーをダウンロードして実行
+2. インストール画面の一番下にある **「Add python.exe to PATH」に必ずチェックを入れて**からインストールを進める
+
+### 方法A: コマンド操作をしない(ZIPをダウンロードする)
+
+コマンドやgitに慣れていない方向けの手順です。
+
+1. このページ右上の緑色の **「Code」** ボタンをクリックし、**「Download ZIP」** を選択してダウンロード
+2. ダウンロードしたZIPファイルを右クリックし、**「すべて展開」** を選んで好きな場所に展開(解凍)する
+3. 展開してできたフォルダを開き、`build.bat` を**ダブルクリック**して実行する
+   - 黒い画面(コマンドプロンプト)が開き、自動で必要なライブラリのインストールとexeの作成が進む
+   - 「ビルド完了」と表示されたら何かキーを押すとウィンドウが閉じる
+4. フォルダ内に新しくできた `dist` フォルダを開き、`BMSWavDurationChecker.exe` をダブルクリックして起動する
+
+以降はこの`BMSWavDurationChecker.exe`を好きな場所に移動して使えます(再ビルドは不要です)。
+
+### 方法B: gitでクローンしてビルドする
 
 ```bat
 git clone https://github.com/ugdd/bms-wav-duration-checker.git
@@ -28,7 +48,7 @@ build.bat
 
 `build.bat`が依存関係のインストールとPyInstallerによるexe化を行い、`dist\BMSWavDurationChecker.exe`が生成されます。生成されたexeはそのまま配布・起動できます。
 
-### 2. ソースから直接実行する
+### 方法C: ソースから直接実行する(exe化しない)
 
 ```bat
 git clone https://github.com/ugdd/bms-wav-duration-checker.git

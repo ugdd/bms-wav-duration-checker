@@ -13,8 +13,11 @@ if errorlevel 1 goto :error
 
 echo.
 echo ビルド完了: dist\BMSWavDurationChecker.exe
+pause
 goto :eof
 
 :error
-echo ビルドに失敗しました。
+echo.
+echo ビルドに失敗しました。上記のメッセージを確認してください。
+pause
 exit /b 1
