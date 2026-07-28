@@ -1,0 +1,11 @@
+# PyInstaller ビルド成果物
+build/
+dist/
+*.spec
+
+# Python
+__pycache__/
+*.pyc
+
+# 実行時に生成される設定ファイル(ユーザー環境依存)
+settings.json
